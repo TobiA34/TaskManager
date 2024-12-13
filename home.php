@@ -2,7 +2,7 @@
   <div class="container">
     <h1 class="display-4 fw-bold">Welcome to Task Manager</h1>
     <p class="lead">Stay organized and productive by managing your tasks effortlessly.</p>
-    <a href="tasks.php" class="btn btn-light btn-lg mt-3">Get Started</a>
+    <a href="task.php" class="btn btn-light btn-lg mt-3">Get Started</a>
   </div>
 </header>
 <section class="container my-5">

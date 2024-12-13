@@ -1,13 +1,5 @@
-<?php
- error_reporting(E_ALL);
-ini_set('display_errors', 1);
 
- $conn = mysqli_connect('localhost', 'root', '', 'task_manager');
-
-if (!$conn) {
-    die('Connection error: ' . mysqli_connect_error());
-}
-?>
+   <?php include('database.php'); ?>
 
 <!DOCTYPE html>
 <html lang="en">
