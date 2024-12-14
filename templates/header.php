@@ -10,7 +10,7 @@ $currentPage = basename($_SERVER['PHP_SELF']);
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav ms-auto">
+      <ul class="navbar-nav ms-auto ">
         <!-- Home Link -->
         <li class="nav-item">
           <a class="nav-link <?php echo ($currentPage == 'index.php') ? 'active border border-2' : ''; ?>" href="index.php">Home</a>
@@ -18,6 +18,10 @@ $currentPage = basename($_SERVER['PHP_SELF']);
         <!-- Tasks Link -->
         <li class="nav-item">
           <a class="nav-link <?php echo ($currentPage == 'task.php') ? 'active border border-2' : ''; ?>" href="task.php">Tasks</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link <?php echo ($currentPage == 'view-all.php') ? 'active border border-2' : ''; ?>" href="view-all.php">View All</a>
         </li>
       </ul>
     </div>

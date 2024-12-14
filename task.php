@@ -3,37 +3,78 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Task Manager</title>
+  <title>Task Manager - Add Task</title>
+  <!-- Bootstrap CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Custom Styles -->
+  <style>
+    body {
+      background-color: #f8f9fa;
+    }
+    h1 {
+      color: #007BFF;
+      font-weight: bold;
+    }
+    .form-container {
+      max-width: 600px;
+      margin: auto;
+    }
+    .card {
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      border: none;
+    }
+    .form-control:focus {
+      border-color: #007BFF;
+      box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+    }
+  </style>
 </head>
 <body>
    <?php include('templates/header.php'); ?>
+
+   <!-- Form Container -->
    <div class="container mt-5">
-    <h1 class="text-center">Add a New Task</h1
-    >
- <form action="add-task.php" method="POST" class="border border-3 p-5 my-5 rounded">
-    <label for="title">Task Title:</label><br>
-    <input type="text" id="title" name="title" class="form-control" required><br><br>
+      <h1 class="text-center mb-4">Add a New Task</h1>
+      <div class="form-container">
+        <!-- Card -->
+        <div class="card p-4 rounded">
+          <!-- Form -->
+          <form action="add-task.php" method="POST">
+            <!-- Task Title -->
+            <div class="mb-3">
+              <label for="title" class="form-label fw-bold">Task Title</label>
+              <div class="input-group">
+                <span class="input-group-text"><i class="bi bi-pencil"></i></span>
+                <input type="text" id="title" name="title" class="form-control" placeholder="Enter task title" required>
+              </div>
+            </div>
 
-    <label for="desc">Task Description:</label><br>
-    <textarea id="desc" class="form-control" name="desc" rows="4" required></textarea><br><br>
+            <!-- Task Description -->
+            <div class="mb-3">
+              <label for="desc" class="form-label fw-bold">Task Description</label>
+              <textarea id="desc" name="desc" class="form-control" rows="4" placeholder="Enter task description" required></textarea>
+            </div>
 
-    <label for="status">Task Status:</label><br>
-    <select id="status" name="status" class="form-control" required>
-      <option value="Pending">Pending</option>
-      <option value="In Progress">In Progress</option>
-      <option value="Completed">Completed</option>
-    </select><br><br>
+            <!-- Task Status -->
+            <div class="mb-4">
+              <label for="status" class="form-label fw-bold">Task Status</label>
+              <select id="status" name="status" class="form-select" required>
+                <option value="" disabled selected>Select status</option>
+                <option value="Pending">Pending</option>
+                <option value="In Progress">In Progress</option>
+                <option value="Completed">Completed</option>
+              </select>
+            </div>
 
-    <button type="submit" class="btn btn-primary w-100">Add Task</button>
-  </form>
-  </div>
+            <!-- Submit Button -->
+            <button type="submit" class="btn btn-primary w-100">Add Task</button>
+          </form>
+        </div>
+      </div>
+   </div>
 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-     <?php include('templates/footer.php'); ?>
-
+   <!-- Bootstrap JS Bundle -->
+   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+   <?php include('templates/footer.php'); ?>
 </body>
 </html>
-
- 
- 
